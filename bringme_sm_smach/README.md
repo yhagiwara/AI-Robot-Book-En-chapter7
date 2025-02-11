@@ -26,7 +26,7 @@ Bring meタスクのためのSmachによるステートマシンのプログラ�
 
 ## ライセンス
 
-Copyright (c) 2022, Yoshinobu Hagiwara and Masaki Ito
+Copyright (c) 2022-2025, Yoshinobu Hagiwara and Masaki Ito
 All rights reserved.
 This project is licensed under the Apache-2.0 license found in the LICENSE file in the root directory of this project.
 
