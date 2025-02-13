@@ -93,3 +93,22 @@ FlexBEによる二状態のステートマシンのプログラム
 
 * [sample_behavior_sm.py](sample_sm_flexbe_behaviors/sample_sm_flexbe_behaviors/sample_behavior_sm.py):
   * 食べ物の探索と食事の状態を含めたSampleタスクのためのステートマシン
+ ## ヘルプ
+
+## 著者
+
+升谷 保博
+
+## 履歴
+
+- 2024-09-15: MoveItの導入など
+- 2023-10-15: ROS Humbleに対応
+- 2022-08-23: ライセンス・ドキュメントの整備
+
+## ライセンス
+
+Copyright (c) 2022-2025, MASUTANI Yasuhiro  
+All rights reserved.  
+This project is licensed under the Apache License 2.0 license found in the LICENSE file in the root directory of this project.
+
+## 参考文献
