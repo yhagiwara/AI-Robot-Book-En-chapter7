@@ -15,14 +15,14 @@ This section explains the procedure to install this repository.
   $ sudo apt-get install -y ros-humble-smach ros-humble-executive-smach
   ```
 
-3. 初めて`FlexBE`を利用する場合は、`FlexBE Behavior Engine`と`FlexBE WebUI`をダウンロードします．
+2. If you are using `FlexBE` for the first time, download `FlexBE Behavior Engine` and `FlexBE WebUI`. 
   ```console
   $ cd ~/airobot_ws/src/
   $ git clone -b 4.0.0 https://github.com/FlexBE/flexbe_behavior_engine.git
   $ git clone https://github.com/AI-Robot-Book-Humble/flexbe_webui.git
   ```
 
-4. ダウンロードしたリポジトリをコンパイルします．
+3. Build the downloaded repositories.
   ```console
   $ cd ~/airobot_ws/
   $ rosdep update
@@ -31,24 +31,22 @@ This section explains the procedure to install this repository.
   $ source install/setup.bash
   ```
 
-5. 最後に，FlexBE WebUIの依存パッケージを以下のコマンドでインストールします．
+4. Finally, install the dependent packages for FlexBE WebUI using the following command.
   ```console
    $ cd ~/airobot_ws/src/flexbe_webui/
    $ pip3 install -r requires.txt
   ```
 
 
-### 本リポジトリのセットアップ
+### Setting up this repository
 
-1. 本リポジトリをダウンロードします．
+1. Download this repository.
   ```console
   $ cd ~/airobot_ws/src/
   $ git clone https://github.com/AI-Robot-Book-Humble/chapter7.git
   ```
-> [!IMPORTANT]
-> [chapter2](https://github.com/AI-Robot-Book-Humble/chapter2)の[airobot_interfaces](https://github.com/AI-Robot-Book-Humble/chapter2/tree/master/airobot_interfaces)にあるActionファイルを使用するため，もしまだインストールされていなければ，そちらのリポジトリーもcloneしてください．
 
-2. ダウンロードしたリポジトリをコンパイルします．
+2. Build the downloaded repository.
   ```console
   $ cd ~/airobot_ws/
   $ colcon build
@@ -56,27 +54,25 @@ This section explains the procedure to install this repository.
   ```
 
 
-## ステートマシンの作成方法
+## How to create a state machine
 
-1. ワークスペースのPATHを設定します．
+1. Set the workspace PATH.
   ``` console
   $ echo "export WORKSPACE_ROOT=~/airobot_ws" >> ~/.bashrc
   $ source ~/.bashrc
   ```
 
-2. ワークスペースにある`src`のフォルダーに移動します．
+2. Move to the `src` folder in the workspace.
   ``` console
   $ cd ~/airobot_ws/src/
   ```
 
-3. Behaviorsのためのパッケージを作成します．
+3. Create a package for behaviors.
   ``` console
   $ ros2 run flexbe_widget create_repo hello_world
   ```
-> [!NOTE]
-> `hello_world`という部分を作成したいリポジトリ名に書き換えても構いません．
 
-4. 質問に対して，「**no**」と回答します．
+4. Answer **no** to the prompt.
   ```console
   Initializing new behaviors repo hello_world_behaviors ...
 
@@ -100,14 +96,14 @@ This section explains the procedure to install this repository.
   (5/5) Do you want to initialize a new Git repository for this project? (yes/no) no
   ```
 
-4. 作成されたパッケージをコンパイルします．
+4. Build the created package.
   ``` console
   $ cd ~/airobot_ws/
   $ colcon build
   $ source install/setup.bash
   ```
 
-5. `FlexBE WebUI`を実行します．
+5. Run `FlexBE WebUI`.
   ``` console
   $ ros2 launch flexbe_webui flexbe_full.launch.py
   ```
